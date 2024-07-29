@@ -47,6 +47,15 @@ public class AccountTest {
         assertThrows(InsufficientBalanceException.class, ()-> firstBank.withdraw(7_0000, "014704"));
         assertEquals(5_000, firstBank.checkBalance("014704 "));
     }
-
+    @Test
+    public void testTheGetAccountNumberMethod(){
+        Account firstBank = new Account("Jack Songu", "0147", 1L);
+        assertEquals(1L, firstBank.getAccountNumber());
+    }
+    @Test
+    public void testTestToGetAccountName(){
+        Account firstBank = new Account("Jack Songu", "0147", 2L);
+        assertEquals("Jack Songu", firstBank.getAccountName());
+    }
 
 }
